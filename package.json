@@ -1,0 +1,31 @@
+{
+  "name": "action-auto-merge",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Automatically enables GitHub auto-merge for safe Dependabot updates.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "rslib build",
+    "test": "tsx --test test/**/*.test.ts",
+    "test-types": "tsc --noEmit",
+    "lint": "biome check .",
+    "lint-ci": "biome ci .",
+    "lint-fix": "biome check --write --unsafe .",
+    "format": "biome format --write ."
+  },
+  "dependencies": {
+    "@actions/core": "latest",
+    "@actions/github": "latest",
+    "semver": "latest"
+  },
+  "devDependencies": {
+    "@arthurfiorette/biomejs-config": "^2.0.1",
+    "@biomejs/biome": "latest",
+    "@rslib/core": "^0.19.6",
+    "@types/node": "latest",
+    "@types/semver": "^7.7.1",
+    "tsx": "latest",
+    "typescript": "latest"
+  }
+}
