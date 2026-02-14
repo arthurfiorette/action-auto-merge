@@ -10,7 +10,6 @@ inputs:
   github-token:
     description: GitHub token with pull-requests write permission.
     required: true
-    default: ${{ github.token }}
 
   target:
     description: Maximum semver target allowed for production dependencies.
