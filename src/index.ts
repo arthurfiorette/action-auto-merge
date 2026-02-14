@@ -96,7 +96,8 @@ async function run(): Promise<void> {
     throw new Error('pull request not found');
   }
 
-  const statusState = pr.commits.nodes[0]?.commit.statusCheckRollup?.state;
+  const latestCommit = pr.commits.nodes.at(-1)?.commit;
+  const statusState = latestCommit?.statusCheckRollup?.state;
   const hasPendingChecks = statusState === 'PENDING' || statusState === 'EXPECTED';
   const canMergeWithoutWaiting = ['CLEAN', 'HAS_HOOKS', 'UNSTABLE'].includes(pr.mergeStateStatus);
 
