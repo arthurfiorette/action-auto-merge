@@ -1,6 +1,7 @@
 {
   "name": "action-auto-merge",
   "version": "1.0.0",
+  "packageManager": "pnpm@10.29.3",
   "private": true,
   "description": "Automatically enables GitHub auto-merge for safe Dependabot updates.",
   "license": "MIT",
