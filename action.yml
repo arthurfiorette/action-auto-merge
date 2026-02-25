@@ -1,4 +1,4 @@
-name: Auto Merge
+name: Auto Merge Dependabot
 
 description: Automatically enables auto-merge for Dependabot pull requests that match a safe semver target.
 
